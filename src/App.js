@@ -13,12 +13,12 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar></Navbar>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/rooms/' component={Rooms} />
-        <Route exact path='/rooms/:slug' component={SingleRoom} />
-        <Route component={Error} />
+        <Route exact path='/' component={Home}></Route>
+        <Route exact path='/rooms/' component={Rooms}></Route>
+        <Route exact path='/rooms/:slug' component={SingleRoom}></Route>
+        <Route component={Error}></Route>
       </Switch>
     </>
   );
