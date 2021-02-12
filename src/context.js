@@ -8,7 +8,7 @@ class RoomProvider extends Component {
     rooms: [],
     sortedRooms: [],
     featuredRooms: [],
-    loaging: true
+    loading: true
   };
   
 // getData
@@ -20,7 +20,7 @@ class RoomProvider extends Component {
       rooms,
       featuredRooms,
       sortedRooms:rooms,
-      loading: false
+      loading: false //при відсутності запропонованих кімнат підгружатиме гіф
     })
   }
   
