@@ -47,6 +47,6 @@ export default class SingleRoom extends Component {
           </Link>
         </Banner>
       </Hero>
-    )
+    );
   }
 }
