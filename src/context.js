@@ -53,6 +53,9 @@ class RoomProvider extends Component {
     );
   }
 }
+ 
+//RoomConsumer Споживач
+//RoomProvider Постачальник
 
 const RoomConsumer = RoomContext.Consumer;
 
