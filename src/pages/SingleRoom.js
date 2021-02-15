@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import defaultBcg from '../images/room-1.jpeg';
-import Hero from '../components/Hero';
+//import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import  { Link } from 'react-router-dom';
 import { RoomContext } from '../context';
@@ -41,13 +41,24 @@ export default class SingleRoom extends Component {
       images
     } = room;
     return (
-      <StyledHero img={images[0]}>
-        <Banner title={`${name} room` }>
-          <Link to='/rooms' className='btn-primary'>
-            back to rooms
-          </Link>
-        </Banner>
-      </StyledHero>
+      <>
+        <StyledHero img={images[0] || this.state.defaultBcg}>
+          <Banner title={`${name} room` }>
+            <Link to='/rooms' className='btn-primary'>
+              back to rooms
+            </Link>
+          </Banner>
+        </StyledHero>
+        <section className='single-room'>
+          <div className='single-room-images'>
+           {images.map((item, index) => {
+             return (
+               <img key={index} src={item} alt={name} />
+             )
+           })}
+          </div>
+        </section>
+      </>
     );
   }
 }
