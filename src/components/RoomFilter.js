@@ -73,7 +73,7 @@ export default function RoomFilter({rooms}) {
             </select>
           </div>
           {/* end guests */}
-          {/* room price*/}
+          {/* room price */}
           <div className='form-group'>
             <label htmlFor='price'>
               rooms price ${price}
@@ -89,7 +89,26 @@ export default function RoomFilter({rooms}) {
               className='form-control'
             />
           </div>
-          {/* end room price*/}
+          {/* end room price */}
+          {/* size */}
+          <div  className='form-group'>
+            <label htmlFor='size'>room size</label>
+            <div  className='size-inputs'>
+              <input
+                type='number'
+                name='minSize'
+                id='size'
+                value={minSize} onChange={handleChange}  className='size-input'
+              />
+              <input
+                type='number'
+                name='maxSize'
+                id='size'
+                value={maxSize} onChange={handleChange}  className='size-input'
+              />
+            </div>
+          </div>
+          {/* end of size */}
         </form>
     </section>
   );
