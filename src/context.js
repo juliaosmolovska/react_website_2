@@ -16,7 +16,7 @@ class RoomProvider extends Component {
     maxPrice: 0,
     minSize: 0,
     maxSize: 0,
-    breakfast: false,
+    breakfast: true,
     pets: false
   };
   
